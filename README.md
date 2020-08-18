@@ -46,7 +46,7 @@ bscr1pt
 #### Add NPC 'Vendor Mall' Beta v1
 
 **These SQLs is the first version so it's possible that you'll find an item or items which is not in the right vendor, it is rare but possible.**
-Scripts are customizable! Change anything you want e.g: DISPLAYID, NAME, SUBNAME, add more items to vendor, **Take care of vendor item pages cannot go over 12-15 pages, im not sure about how many, but if you add more items than the vendor could 'serve' at the moment when you click on the vendor in-game the game crash with WOW Error, so i'm not reccommend this**
+Scripts are customizable! Change anything you want e.g: DISPLAYID, NAME, SUBNAME, add more items to vendor, **Take care of vendor item pages cannot go over 12-15 pages, im not sure about how many, but if you add more items than the vendor could 'serve' at the moment when you click on the vendor in-game the game crash with WOW Error, so i'm not reccommend this!!!**
 
 1. Start MySQL Server ;)
 2. Execute the **mall_vendors_creature_template.sql** to add new NPCs into the database creature_template table's the entry id range is 40001-40032 (Except 40025, accidentally i skipped this :P )
