@@ -55,4 +55,6 @@ Scripts are customizable! Change anything you want e.g: DISPLAYID, NAME, SUBNAME
 5. Check this once more too with a simple query: `SELECT * FROM npc_vendor where entry >=40001 AND entry <= 40032;`
 6. Last step is to spawn these NPCs somewhere you want with `.npc add ID` command within the NPC entry id range what i mentioned in the second step.
 
+![Vendors](image/vendor-mall.jpg)
+
 ##### Repository is not include the Python script.
