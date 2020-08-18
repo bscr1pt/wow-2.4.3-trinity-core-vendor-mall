@@ -1,6 +1,6 @@
-#### Only for World Of Warcraft 2.4.3 Trinity Core Emu
+### Only for World Of Warcraft 2.4.3 Trinity Core Emu
 
-##### Short Story
+#### Short Story
 
 I created my own private server to have fun with my friend(s) and i realized to add every item is too tiring, so i tried to search a 'Quick & Dirty' solution for this incompletion, but i did not find any SQLs for 2.4.3 Trinity Core Emu just for 3.3.5. :( Sad.
 Hmm but i was so curious about the vendor creating and after a few hour i got a bit information from different kind of forums so i decide it to create my own Vendor Mall, if it won't be perfect it's fine...because you know it's first time :) when i do something like that.
@@ -8,11 +8,11 @@ Hmm but i was so curious about the vendor creating and after a few hour i got a 
 I spent a few hours with the reading of Trinity Core Database documentation [here](https://trinitycore.atlassian.net/wiki/spaces/tc/pages/2130075/Databases) .
 There are a lot of interesting information about tables, columns which is sometimes help you to find out the relations between the tables e.g: Check foreign keys/primary keys, the name of the id column etc...A few table/column documentation may empty but it was not a big problem because i had a working database where i can find the solution for my problem, okay it is a bit harder than reading...But i enjoyed it!
 
-After when i finally extract that piece of information from the table columns documentation, i started to write SQL queries, i got every kinda armor and i saved into separated files, these you can see in the [item_ids](https://github.com/bscr1pt/wow-2.4.3-trinity-core-vendor-mall/item_ids) directory and i did the same thing with the other items e.g: gems, enchants, mounts, etc... The workaround was the same in every kind of items only the query condition(s) was different.
+After when i finally extract that piece of information from the table columns documentation, i started to write SQL queries, i got every kinda armor and i saved into separated files, these you can see in the [item_ids](item_ids) directory and i did the same thing with the other items e.g: gems, enchants, mounts, etc... The workaround was the same in every kind of items only the query condition(s) was different.
 
 It was a lot of id so i made a little Python script to generate those INSERT sqls which you see below in the next section. It can do with any other language but this is my favourite.
 
-There is another folder called [other-sqls-from-queries](https://github.com/bscr1pt/wow-2.4.3-trinity-core-vendor-mall/other-sqls-from-queries) so these are the results of my little Python script.
+There is another folder called [other-sqls-from-queries](other-sqls-from-queries) so these are the results of my little Python script.
 
 Few hours of effort and i successfully created my own Vendor Mall the last thing that i had to do is to add npcs somewhere in-game.
 
@@ -21,7 +21,7 @@ A lot of people search for similar SQLs i think, so i decided to share it.
 Good Luck & Have Fun!
 bscr1pt
 
-##### Add NPC Vendor manual steps
+#### Add NPC Vendor manual steps
 
 - Start MySQL Server ;)
 
@@ -43,7 +43,7 @@ bscr1pt
   ```
 - That's all :) you have a new NPC in the creature_template table which mean you can add it in-game with `.npc add NPCENTRY` command and finally you can buy items.
 
-##### Add NPC 'Vendor Mall' Beta v1
+#### Add NPC 'Vendor Mall' Beta v1
 
 **These SQLs is the first version so it's possible that you'll find an item or items which is not in the right vendor, it is rare but possible.**
 Scripts are customizable! Change anything you want e.g: DISPLAYID, NAME, SUBNAME, add more items to vendor, **Take care of vendor item pages cannot go over 12-15 pages, im not sure about how many, but if you add more items than the vendor could 'serve' at the moment when you click on the vendor in-game the game crash with WOW Error, so i'm not reccommend this**
@@ -55,4 +55,4 @@ Scripts are customizable! Change anything you want e.g: DISPLAYID, NAME, SUBNAME
 5. Check this once more too with a simple query: `SELECT * FROM npc_vendor where entry >=40001 AND entry <= 40032;`
 6. Last step is to spawn these NPCs somewhere you want with `.npc add ID` command within the NPC entry id range what i mentioned in the second step.
 
-###### Repository is not include the Python script.
+##### Repository is not include the Python script.
