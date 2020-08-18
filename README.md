@@ -25,17 +25,16 @@ bscr1pt
 
 - Start MySQL Server ;)
 
-NPCENTRY - Npc id, the number you are going to use when your going to spawn the npc.
-DISPLAYID - The model of the npc, e.g: Neutral Draenei npc display id is 18487, so it means the morph or the skin of the npc in the game.
-NAME - The npc/vendors name.
-SUBNAME - The subname of the npc/vendor (will be below the name (guildname on characters)
-
+- NPCENTRY - Npc id, the number you are going to use when your going to spawn the npc.
+- DISPLAYID - The model of the npc, e.g: Neutral Draenei npc display id is 18487, so it means the morph or the skin of the npc in the game.
+- NAME - The npc/vendors name.
+- SUBNAME - The subname of the npc/vendor (will be below the name (guildname on characters)
 - `INSERT INTO creature_template VALUES ('NPCENTRY', '0', '0', '0', '0', '0', 'DISPLAYID', '0', '0', '0', 'NAME', 'SUBNAME', '', '0', '60', '60', '0', '35', '35', '128', '1', '1.4286', '1', '0', '100', '100', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '', '0');`
 
 - Execute that INSERT on the world database, this will 'create' a new creature, okay next step will be we add items to this vendor
 - With these SQL insertions you can add items to that:
-  ITEMID - Item you want the vendor to sell (ID) check wowhead.
-  NPCENTRY - The ID of the NPC you created before.
+- ITEMID - Item you want the vendor to sell (ID) check wowhead.
+- NPCENTRY - The ID of the NPC you created before.
 - ```INSERT INTO npc_vendor VALUES ('NPCENTRY','0','ITEMID',0,'0',0);
   INSERT INTO npc_vendor VALUES ('NPCENTRY','0','ITEMID',0,'0',0);
   INSERT INTO npc_vendor VALUES ('NPCENTRY','0','ITEMID',0,'0',0);
